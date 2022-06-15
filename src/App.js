@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import { Stars } from './components/Stars';
+import { Listing } from './components/Listing';
+
+// import { parseJSON } from './utils/parseJSON';
+// по всей видимости реакт сразу импортирует из JSON объект, но функцию я написал оставлю для отчетности
+import DATA from './data';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Stars count={1} />
+      <Stars count={2} />
+      <Stars count={3} />
+      <Stars count={4} />
+      <Stars count={5} />
+      <Stars count={6} />
+      <Listing items={DATA} />
     </div>
   );
 }
